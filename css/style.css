@@ -1,0 +1,108 @@
+@font-face {
+  font-family: NBook;
+  src: url('../assets/fonts/Nord-Book.ttf');
+}
+:root{
+  --background: #243068;
+  --text: #82A4D6;
+  --light-blue: #5978BB; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: NBook, sans-serif;
+}
+
+
+/* bootstrap */
+
+header{
+  padding-top: 1rem;
+}
+.nav-link{
+  color: var(--light-blue) !important;
+}
+.nav-link.active{
+  color: var(--text) !important;
+}
+.logo{
+  max-width: 120px;
+}
+
+body{
+  background: var(--background);
+}
+.social-icon{
+  position: fixed;
+  top:50%;
+  right: 2%;
+  transform: translateY(-50%);
+}
+.social-icon ul{
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+.social-icon ul::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 2px;
+  height: 85%;
+  transform: translate(0,-50%);
+  background: var(--light-blue);
+  z-index: 0;
+}
+.social-icon ul li{
+  z-index: 2;
+  font-size: 2rem;
+  position: relative;
+  margin: 0.75rem 0;
+  color: var(--light-blue);
+  list-style-type: square;
+}
+
+.social-icon ul li.active{
+  color: var(--text);
+}
+.content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 3rem;
+  overflow: hidden;
+}
+.content-text{
+  font-size: 10rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+}
+.content button{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 2rem;
+  transform: translateX(-50%);
+  background: transparent;
+  border: transparent;
+}
+
+.scene,
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
