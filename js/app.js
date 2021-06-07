@@ -78,7 +78,7 @@ function init() {
   let elements = ['Cell','DiscGear','DualGear','Hand','innerGear','WheelGear','Cell','DiscGear','DualGear','Hand','innerGear']
 
   elements.forEach((e,i) => {
-    loader.load('watch/assets/3DElements/'+e+'.glb',(gltf)=>{
+    loader.load('https://mohitkushwah520.github.io/watch/assets/3DElements/'+e+'.glb',(gltf)=>{
       scene.add(gltf.scene)
       ele = gltf.scene.children[0]
       // ele.position.set(-80,0,0)
